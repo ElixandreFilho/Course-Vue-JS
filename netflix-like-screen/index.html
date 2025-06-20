@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NETFLIX Clone</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">NETFLIX</h1>
+        <h2 class="hero-subtitle">Unlimited movies, TV shows, and more</h2>
+        <p class="hero-text">Starts at BRL 20.90. Cancel anytime.</p>
+        
+        <div class="cta-container">
+          <p class="cta-text">Ready to watch? Enter your email to create or restart your membership.</p>
+          
+          <div class="email-form">
+            <input 
+              type="email" 
+              placeholder="Email address" 
+              class="email-input"
+              v-model="email"
+            />
+            <button class="cta-button">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
