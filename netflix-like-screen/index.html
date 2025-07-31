@@ -1,37 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NETFLIX Clone</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-</head>
-<body>
-  <div id="app">
-    <section class="hero">
-      <div class="hero-content">
-        <h1 class="hero-title">NETFLIX</h1>
-        <h2 class="hero-subtitle">Unlimited movies, TV shows, and more</h2>
-        <p class="hero-text">Starts at BRL 20.90. Cancel anytime.</p>
-        
-        <div class="cta-container">
-          <p class="cta-text">Ready to watch? Enter your email to create or restart your membership.</p>
-          
-          <div class="email-form">
-            <input 
-              type="email" 
-              placeholder="Email address" 
-              class="email-input"
-              v-model="email"
-            />
-            <button class="cta-button">Get Started</button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Login</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="netflix-login">
+        <header class="header">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="logo" alt="Netflix" />
+          <button class="sign-in-btn">Sign In</button>
+        </header>
 
-  <script src="app.js"></script>
-</body>
+        <main class="content">
+          <h1>Unlimited movies, TV shows, and more</h1>
+          <p>Starts at BRL 20.90. Cancel anytime.</p>
+          <p>Ready to watch? Enter your email to create or restart your membership.</p>
+
+          <form @submit.prevent="submitEmail">
+            <input type="email" v-model="email" placeholder="Email address" required />
+            <button type="submit">Get Started</button>
+          </form>
+        </main>
+      </div>
+    </div>
+  </body>
 </html>
